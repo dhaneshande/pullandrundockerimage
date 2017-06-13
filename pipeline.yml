@@ -1,0 +1,15 @@
+jobs:
+- name: unit-tests
+  serial: true
+  public: true
+  plan:
+  - get: concourse-pipeline-samples
+    trigger: true
+  - task: run-unit-tests
+    file: concourse-pipeline-samples/blue-green-app-deployment/ci/tasks/unit-tests.yml
+resources:
+- name: concourse-pipeline-samples
+  type: git
+  source:
+    branch: master
+    uri: https://github.com/pivotalservices/concourse-pipeline-samples.git
