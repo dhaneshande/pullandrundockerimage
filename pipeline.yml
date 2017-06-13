@@ -6,7 +6,7 @@ jobs:
   - get: concourse-pipeline-samples
     trigger: true
   - task: run-unit-tests
-    file: pullandrundockerimage/ci/tasks/unit-tests.yml
+    file: concourse-pipeline-samples/tasks/unit-tests.yml
 resources:
 - name: concourse-pipeline-samples
   type: git
