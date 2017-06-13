@@ -8,7 +8,7 @@ image_resource:
     tag: "latest"
 
 inputs:
-- name: hello-world-docker-image
+- name: concourse-pipeline-samples
 
 run:
-  path: hello-world-docker-image/dockerpullandrun/tasks/run-unit-tests
+  path: concourse-pipeline-samples/tasks/run-unit-tests
