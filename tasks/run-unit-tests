@@ -1,6 +1,4 @@
-#!/bin/sh
-
-set -xe
+docker run -it -p 4000:4000 dhaneshande/nodecf
 
 npm install
 npm start
