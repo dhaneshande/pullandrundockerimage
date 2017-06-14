@@ -5,14 +5,8 @@ jobs:
   plan:
   - get: concourse-pipeline-samples
     trigger: true
-    run:
-        path: /bin/bash
-        args:
-        - -exc
-        - |
-          pwd
-          npm install
-          npm start
+  - task: run-unit-tests
+    file: concourse-pipeline-samples/tasks/unit-tests.yml
 resources:
 - name: concourse-pipeline-samples
   type: git
